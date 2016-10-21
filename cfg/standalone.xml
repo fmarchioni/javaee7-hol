@@ -135,12 +135,12 @@
         <subsystem xmlns="urn:jboss:domain:datasources:4.0">
             <datasources>
                 
-  <datasource jndi-name="java:jboss/datasources/brachub" pool-name="brachub" enabled="true" use-java-context="true">
-        <connection-url>java:jboss/datasources/MySQLDS</connection-url>
+  <datasource jndi-name="java:jboss/datasources/MySQLDS" pool-name="brachub" enabled="true" use-java-context="true">
+        <connection-url>jdbc:mysql://mysql:3306/sampledb</connection-url>
         <driver>mysql</driver>
         <security>
-            <user-name>root</user-name>
-            <password>1234</password>
+            <user-name>mysql</user-name>
+            <password>mysql</password>
         </security>
         <statement>
             <prepared-statement-cache-size>100</prepared-statement-cache-size>
@@ -159,7 +159,7 @@
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
                     </driver>
-                     <driver name="mysql" module="com.sql.mysql">
+                     <driver name="mysql" module="com.sql">
                        <driver-class>com.mysql.jdbc.Driver</driver-class>
                    </driver>
                 </drivers>
