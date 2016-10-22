@@ -132,6 +132,7 @@
             </thread-pool>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:bean-validation:1.0"/>
+        <subsystem xmlns="urn:jboss:domain:datasources:4.0">
          <datasource jndi-name="java:jboss/datasources/MySQLDS" pool-name="brachub" enabled="true" use-java-context="true">
         <connection-url>jdbc:mysql://mysql:3306/sampledb</connection-url>
         <driver>mysql</driver>
